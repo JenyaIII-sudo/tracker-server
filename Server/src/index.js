@@ -16,7 +16,7 @@ app.use(trackRoutes);
 app.use(cors());
 
 const mongoURI = config.get('mongoURI');
-const PORT = config.get('port') || 5000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
